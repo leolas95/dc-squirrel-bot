@@ -15,7 +15,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
+    print(f'Reacting to {message.content[:20]} with 🐿️')
+    await message.add_reaction('🐿️')
 
 client.run(os.getenv('BOT_TOKEN'))
