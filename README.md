@@ -3,7 +3,7 @@ Squirrel bot
 
 A just-for-fun Discord bot that replies with a 🐿️  emoji to each message sent in the server.
 
-It was made out of boredom a bloomy sunday afternoon, so it goes without saying that no special quality requirements were set, besides to Just Work ™
+It was made out of boredom a gloomy sunday afternoon, so it goes without saying that no special quality requirements were set, besides to Just Work ™
 
 
 The structure of the project is as follows:
