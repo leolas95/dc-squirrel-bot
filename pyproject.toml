@@ -8,8 +8,6 @@ authors = ["Leonardo Guedez <leonardoguedezsuazo@gmail.com>"]
 python = "^3.10"
 "discord.py" = "^1.7.3"
 python-dotenv = "^0.20.0"
-fastapi = "^0.75.2"
-uvicorn = {extras = ["standard"], version = "^0.17.6"}
 
 [tool.poetry.dev-dependencies]
 
