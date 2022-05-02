@@ -1,5 +1,3 @@
-
-import logging
 import os
 import discord
 
@@ -9,7 +7,7 @@ load_dotenv()
 
 class SquirrelClient(discord.Client):
     async def on_ready(self):
-        logging.info(f'Bot is ready as user {self.user}')
+        print(f'Bot is ready as user {self.user}')
 
     async def on_message(self, message):
         # we do not want the bot to reply to itself
