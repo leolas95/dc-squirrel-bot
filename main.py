@@ -4,18 +4,19 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-client = discord.Client()
+class MyClient(discord.Client):
+    async def on_ready(self):
+        print(f'Logged in as {self.user} (ID: {self.user.id})')
+        print('------')
 
-@client.event
-async def on_ready():
-    print('We have logged in as {0.user}'.format(client))
+    async def on_message(self, message):
+        # we do not want the bot to reply to itself
+        if message.author.id == self.user.id:
+            return
+        
+        await message.add_reaction('🐿️')
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
+intents = discord.Intents.default()
 
-    print(f'Reacting to {message.content[:20]} with 🐿️')
-    await message.add_reaction('🐿️')
-
+client = MyClient()
 client.run(os.getenv('BOT_TOKEN'))
